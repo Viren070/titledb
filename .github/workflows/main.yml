@@ -68,7 +68,7 @@ jobs:
       - name: Run tiny.py
         run: |
           python3 tiny.py titledb/titles.json
-          python3 tiny.py titledb/titles.json -o titles.US.en.json -f description icornUrl name
+          python3 tiny.py titledb/titles.json -o titles.US.en.json -f description iconUrl name
 
       
       - uses: "softprops/action-gh-release@v2"
