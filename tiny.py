@@ -22,10 +22,10 @@ def parse_args() -> argparse.Namespace:
     Returns:
         argparse.Namespace: Object containing output_file, input_file and fields arguments
     """
-    parser = argparse.ArgumentParser(description="Process some JSON.")
+    parser = argparse.ArgumentParser(description="Reduce the size of the titleDB JSON file by removing entries without a name and only keeping the specified fields.")
     parser.add_argument("input_file", help="The JSON file to process")  # required argument
     parser.add_argument("-o", "--output_file", help="The file to output_file to. Defaults to the input file if not provided")  # optional arguments
-    parser.add_argument("-f", "--fields", nargs="*", help="List of fields to keep in the output_file, defaults to all fields")
+    parser.add_argument("-f", "--fields", nargs="*", help="List of fields to keep in the output_file, defaults to all fields. Separate fields with a space e.g -f name description rating")
     return parser.parse_args()
 
 
