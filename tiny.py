@@ -25,7 +25,7 @@ if __name__ == "__main__":
                     "numberOfPlayers", "publisher", "rank", "rating", "ratingContent", "region", "regions", "releaseDate", "rightsId", "screenshots", "size", "version"]
 
     if fields and not all(field in valid_fields for field in fields):
-        logging.error(f"Invalid field provided. Valid fields are: {", ".join(valid_fields)}")
+        logging.error(f"Invalid field [{', '.join(set(fields) - set(valid_fields))}]. Valid fields are {', '.join(valid_fields)}")
         sys.exit(1)
 
     if not os.path.exists(args.input_file):
