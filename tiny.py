@@ -3,10 +3,10 @@ import sys
 import argparse
 import json
 import datetime
-import logging 
-import math 
+import logging
+import math
 
-logging.basicConfig(level=logging.INFO, format='[%(asctime)s] [%(levelname)s]: %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+logging.basicConfig(level=logging.INFO, format="[%(asctime)s] [%(levelname)s]: %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 
 if __name__ == "__main__":
     logging.info("Initialising tiny.py")
@@ -42,7 +42,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     start_size = os.path.getsize(title_db)
-    logging.info(f"Processing {len(data)} titles from {title_db} of size {(start_size/1024/1024):0f} and outputting result to {output}. {"Including fields: " + ", ".join(fields) if fields else "Including all fields."}")
+    logging.info(f"Read {len(data)} titles from {title_db} ({start_size/1024/1024:.1f} MB)")
     new_data = {}
     previous = 0
     for count, (title_id, title_data) in enumerate(data.items(), start=1):
