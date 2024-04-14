@@ -64,4 +64,5 @@ if __name__ == "__main__":
     except Exception as e:
         logging.error(f"Error writing to {output}. {e}")
         sys.exit(1)
-    logging.info(f"Task completed in {(datetime.datetime.now() - start_time).total_seconds()} seconds and reduced the file size from {(start_size/1024/1024):.1f} MB to {(os.path.getsize(output)/1024/1024):.1f} MB. Exiting.")
+    logging.info(f"Task completed in {(datetime.datetime.now() - start_time).total_seconds()} seconds and reduced the file size from {
+                 (start_size/1024/1024):.1f} MB to {(os.path.getsize(output)/1024/1024):.1f} MB. Exiting.")
