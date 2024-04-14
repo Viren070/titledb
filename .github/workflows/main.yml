@@ -58,7 +58,7 @@ jobs:
           curl https://raw.githubusercontent.com/Viren070/titledb/main/overrides.txt > overrides.txt
           curl https://raw.githubusercontent.com/Viren070/titledb/main/retailOnly.txt > retailOnly.txt
           curl https://raw.githubusercontent.com/Viren070/titledb/main/nut.conf > conf/nut.conf 
-          curl https://raw.githubusercontent.com/Viren070/titledb/main/trim.py > trim.py
+          curl https://raw.githubusercontent.com/Viren070/titledb/main/tiny.py > tiny.py
           wait 
           mv *.txt titledb/ 
           touch titledb/titles.json
