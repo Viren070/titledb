@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-import os
-import sys
 import argparse
 import json
 import logging
 import math
+import os
+import sys
 import time
 
 LOG_FORMAT = "[%(asctime)s] [%(levelname)s]: %(message)s"
